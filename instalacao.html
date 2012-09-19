@@ -28,10 +28,20 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>Instalação</h1>
-
 		<h2>Ambiente Linux</h2>
-
-  	<h2>Ambiente Linux</h2>
+        <h3>Ubuntu (Baseado em Debian)</h3>
+        <p>A instalação no Ubuntu é relativamente simples. É necessário instalar apenas um pacote de versionamento do Ruby. O mais famoso é o <a href="https://rvm.io/">RVM</a> (Ruby Version Manager). Ele será o responsável por baixar, compilar a instalar o Ruby na sua máquina.</p>
+        <p>Para instalar o RVM e o Ruby, execute os comandos abaixo:</p>
+        <pre>
+sudo apt-get install curl
+curl -L https://get.rvm.io | bash -s stable --ruby
+rvm reload
+rvm requirements</pre>
+		<br />
+		<p>Esse comando irá imprimir uma lista das dependências para instalação de cada versão do Ruby (como JRuby, IronRuby ou o CRuby, que é esse que estamos instalando).</p>
+        <p>A copia dos comando da versão atual do Ruby 1.9.3 é a seguinte:</p>
+        <pre>sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config</pre>
+        <h3>Fedora (Baseado em RedHat)</h3>
 
 		<h2>Ambiente Windows</h2>
 
