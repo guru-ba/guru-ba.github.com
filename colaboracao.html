@@ -51,6 +51,11 @@
 		<code>git push origin master</code>
 		<p>&nbsp;</p>
 		<p>Neste caso, utilizamos o comando PUSH para enviar o arquivo para o local de origem dele, que no caso é o Github, e ele será versionado no branch master, que é o repositório principal.</p>
+		<h2>Fiz um push antes de comitar, o que faço agora?</h2>
+		<p>Isto é fácil de resolver. O GIT fez uma atualização no projeto que pode ser desfeita. Para isto vamos usar o comando RESET.</p>
+		<code>git reset HEAD</code>
+		<p>&nbsp;</p>
+		<p>Feito isto, tanto o comando ADD como o PUSH serão desfeitos. Então, execute novamente o ADD, em seguida o COMMIT e posteriormente o PUSH.</p>
 		<h2>Ocorreu um conflito?</h2>
         <p>Pronto, duas pessoas alteraram o mesmo arquivo e ocorreu um conflito. O que fazer?</p>
 		<h2>Adicionando outro projeto como submodulo</h2>
