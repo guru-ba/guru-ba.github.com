@@ -33,16 +33,17 @@
 		<p>&nbsp;</p>
 		<p>Feito isto, o repositório será copiado integralmente para a atual pasta onde o prompt/terminal está aberto.</p>
 		<h2>Adicionando e removendo arquivos</h2>
-        <p>Quando você criar um arquivo dentro do seu repositório, precisa versioná-lo no GIT. Mas antes de fazermos qualquer comando, é sempre bom verificar o status do projeto. Para isto vamos usar o comando STATUS que irá nos informar o que foi alterado, e nos dará dicas de como proceder.<p>
+        <p>Quando você criar um arquivo dentro do seu repositório, precisa versioná-lo no GIT. Mas antes de executarmos qualquer comando, é sempre bom verificar o status do projeto. Para isto vamos usar o comando STATUS que irá nos informar o que foi alterado, e nos dará dicas de como proceder.<p>
 		<code>git status</code>
 		<p>&nbsp;</p>
 		<p>Agora que já sabemos quais arquivos foram alterados, vamos seguir as dicas que são: caso algum arquivo tenha sido criado ou alterado, devemos usar o comando ADD para incluir a alteração no projeto.</p>
 		<p>Para isto, vai usar o comando ADD incluindo todas as alterações feitas:</p>
 		<code>git add *</code>
 		<p>&nbsp;</p>
-		<p>Neste caso você adicionará todos os arquivos que ainda não estão versionados. Caso deseje incluir um arquivo específico, basta trocar o * pelo nome do arquivo.</p>
+		<p>Neste caso você adicionará todos os arquivos ou alterações que ainda não estejam versionados. Caso deseje incluir um arquivo ou alteração específica, basta trocar o * pelo nome do arquivo a ser incluído, ou onde ocorreu a alteração.</p>
 		<code>git add index.php</code>
 		<p>&nbsp;</p>
+		<p>Vale lembrar que, você sempre deve partir da raiz do projeto. Se o arquivo estiver em uma pasta application, então você vai dar um git add no arquivo application/index.php.</p>
 		<p>Pronto, seu arquivo foi incluído no repositório, agora você pode confirmar a inclusão dando um COMMIT no respositório.</p>
 		<code>git commit -m "Descrição das alterações feitas"</code>
 		<p>&nbsp;</p>
