@@ -27,9 +27,31 @@
 		<h2>Criando um repositório no Github</h2>
         <p></p>
 		<h2>Clonando para o repositório local</h2>
-        <p></p>
+        <p>Você pode clonar um repositório usando o programa <a href="http://windows.github.com/">Github for Windows</a>. Para isto, após logar no programa do github, abra o menu repositórios, e click no botão direito que clona o projeto. Após clicar, seu projeto aparecerá em C:\Users\SEU-USUARIO\Documents\GitHub\seu-projeto e poderá utilizá-lo normalmente.</p>
+		<p>Mas, se você não quiser utilizar o Github for Windows, estando com o GIT instalado, vamos ver como proceder no Prompt do Windows ou Terminal do Linux.</p>
+		<code>git clone http://github.com/nomeUsuarioOuOrganizacao/projeto.git projeto</code>
+		<p>&nbsp;</p>
+		<p>Feito isto, o repositório será copiado integralmente para a atual pasta onde o prompt/terminal está aberto.</p>
 		<h2>Adicionando e removendo arquivos</h2>
-        <p></p>
+        <p>Quando você criar um arquivo dentro do seu repositório, precisa versioná-lo no GIT. Mas antes de fazermos qualquer comando, é sempre bom verificar o status do projeto. Para isto vamos usar o comando STATUS que irá nos informar o que foi alterado, e nos dará dicas de como proceder.<p>
+		<code>git status</code>
+		<p>&nbsp;</p>
+		<p>Agora que já sabemos quais arquivos foram alterados, vamos seguir as dicas que são: caso algum arquivo tenha sido criado ou alterado, devemos usar o comando ADD para incluir a alteração no projeto.</p>
+		<p>Para isto, vai usar o comando ADD incluindo todas as alterações feitas:</p>
+		<code>git add *</code>
+		<p>&nbsp;</p>
+		<p>Neste caso você adicionará todos os arquivos que ainda não estão versionados. Caso deseje incluir um arquivo específico, basta trocar o * pelo nome do arquivo.</p>
+		<code>git add index.php</code>
+		<p>&nbsp;</p>
+		<p>Pronto, seu arquivo foi incluído no repositório, agora você pode confirmar a inclusão dando um COMMIT no respositório.</p>
+		<code>git commit -m "Descrição das alterações feitas"</code>
+		<p>&nbsp;</p>
+		<p>Agora que o repositório está devidamente versionado localmente, para que ele seja atualizado no Github vamos utilizar o comando PUSH.</p>
+		<code>git push origin master</code>
+		<p>&nbsp;</p>
+		<p>Neste caso, utilizamos o comando PUSH para enviar o arquivo para o local de origem dele, que no caso é o Github, e ele será versionado no branch master, que é o repositório principal.</p>
+		<h2>Ocorreu um conflito?</h2>
+        <p>Pronto, duas pessoas alteraram o mesmo arquivo e ocorreu um conflito. O que fazer?</p>
 		<h2>Adicionando outro projeto como submodulo</h2>
         <p></p>
 		<h3>Autores e Colaboradores</h3>
