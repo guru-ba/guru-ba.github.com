@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8' />
-	
-    <title>Guru-ba.github.com</title>
-	
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Guru-ba.github.com : Grupo de Usuarios Ruby da Bahia" />
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-  </head>
-<body>
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/guru-ba">View on GitHub</a>
-          <h1 id="project_title">Guru-ba.github.com</h1>
-          <h2 id="project_tagline">Grupo de Usuarios Ruby da Bahia</h2>
-        </header>
-    </div>
+    <head>
+        <meta charset='utf-8' />
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>Colaboração</h1>
-		<p>Vamos falar um pouco sobre como desenvolver códigos ruby de forma colaborativa, através do GIT.</p>
-		<h2>Criando um repositório no Github</h2>
-        <p></p>
-		<h2>Clonando para o repositório local</h2>
-        <p>Você pode clonar um repositório usando o programa <a href="http://windows.github.com/">Github for Windows</a>. Para isto, após logar no programa do github, abra o menu repositórios, e click no botão direito que clona o projeto. Após clicar, seu projeto aparecerá em C:\Users\SEU-USUARIO\Documents\GitHub\seu-projeto e poderá utilizá-lo normalmente.</p>
-		<p>Mas, se você não quiser utilizar o Github for Windows, estando com o GIT instalado, vamos ver como proceder no Prompt do Windows ou Terminal do Linux.</p>
-		<code>git clone http://github.com/nomeUsuarioOuOrganizacao/projeto.git projeto</code>
-		<p>&nbsp;</p>
-		<p>Feito isto, o repositório será copiado integralmente para a atual pasta onde o prompt/terminal está aberto.</p>
-		<h2>Adicionando e removendo arquivos</h2>
-        <p>Quando você criar um arquivo dentro do seu repositório, precisa versioná-lo no GIT. Mas antes de executarmos qualquer comando, é sempre bom verificar o status do projeto. Para isto vamos usar o comando STATUS que irá nos informar o que foi alterado, e nos dará dicas de como proceder.<p>
-		<code>git status</code>
-		<p>&nbsp;</p>
-		<p>Agora que já sabemos quais arquivos foram alterados, vamos seguir as dicas que são: caso algum arquivo tenha sido criado ou alterado, devemos usar o comando ADD para incluir a alteração no projeto.</p>
-		<p>Para isto, vai usar o comando ADD incluindo todas as alterações feitas:</p>
-		<code>git add *</code>
-		<p>&nbsp;</p>
-		<p>Neste caso você adicionará todos os arquivos ou alterações que ainda não estejam versionados. Caso deseje incluir um arquivo ou alteração específica, basta trocar o * pelo nome do arquivo a ser incluído, ou onde ocorreu a alteração.</p>
-		<code>git add index.php</code>
-		<p>&nbsp;</p>
-		<p>Vale lembrar que, você sempre deve partir da raiz do projeto. Se o arquivo estiver em uma pasta application, então você vai dar um git add no arquivo application/index.php.</p>
-		<p>Pronto, seu arquivo foi incluído no repositório, agora você pode confirmar a inclusão dando um COMMIT no respositório.</p>
-		<code>git commit -m "Descrição das alterações feitas"</code>
-		<p>&nbsp;</p>
-		<p>Agora que o repositório está devidamente versionado localmente, para que ele seja atualizado no Github vamos utilizar o comando PUSH.</p>
-		<code>git push origin master</code>
-		<p>&nbsp;</p>
-		<p>Neste caso, utilizamos o comando PUSH para enviar o arquivo para o local de origem dele, que no caso é o Github, e ele será versionado no branch master, que é o repositório principal.</p>
-		<h2>Fiz um push antes de comitar, o que faço agora?</h2>
-		<p>Isto é fácil de resolver. O GIT fez uma atualização no projeto que pode ser desfeita. Para isto vamos usar o comando RESET.</p>
-		<code>git reset HEAD</code>
-		<p>&nbsp;</p>
-		<p>Feito isto, tanto o comando ADD como o PUSH serão desfeitos. Então, execute novamente o ADD, em seguida o COMMIT e posteriormente o PUSH.</p>
-		<h2>Outro usuário alterou o arquivo, o que faço?</h2>
-		<p>Antes de fazer qualquer mudança em um projeto em que outras pessoas esteja também trabalhando, você deve atualizar o repositório para que ele fique do mesmo jeito que está o repositório guardado no GITHUB. Para isto, vamos usar o comando CHECKOUT que vai trazer todas as mudanças do projeto para o meu repositório local.</p>
-		<code>git checkout</code>
-		<p>&nbsp;</p>
-		<p>Pronto, agora todo os arquivos que foram alterados pelos membros de minha equipes já estão no meu repositório e posso trabalhar, criando novos arquivos ou editando ou já existentes.</p>
-		<h2>Ocorreu um conflito?</h2>
-        <p>Pronto, duas pessoas alteraram o mesmo arquivo e ocorreu um conflito. O que fazer?</p>
-		<h2>Adicionando outro projeto como submodulo</h2>
-        <p>Vamos supor que você deseja adicionar alguma biblioteca ou framework que já esteja hospedado em um projeto no GITHUB. Para adicionar esta biblioteca ou framework vamos utilizar o comando SUBMODULE ADD, vejamos como fica:</p>
-		<code>git submodule add http://github.com/nomeUsuarioOuOrganizacao/projeto.git pastasubmodulo</code>
-		<p>&nbsp;</p>
-		<p>Criamos um submodulo, dentro da pasta pastasubmodulo, dentro do nosso projeto. Se você observar, o submodulo foi criado para o seu projeto. Agora você pode fazer as alterações que desejar no seu submodulo, pois somente fará efeito no seu repositorio.</p>
-		<p>Agora, vamos adicionar os arquivos do submodulo no nosso projeto, seguindo os passos já vistos anteriormente.</p>
-		<code>
-		git add *<br>
-		git commit -m "adicionado submodulo ao projeto"<br>
-		git push origin master
-		</code>
-		<p>&nbsp;</p>
-		<p>Feito isto, agora o submodulo foi completamente incorporado ao seu repositorio git no GITHUB.</p>
-		<p><a href="http://git-scm.com/book/pt-br/Ferramentas-do-Git-Subm%C3%B3dulos" target="_blank">Veja mais em ...</a></p>
-		<h3>Autores e Colaboradores</h3>
-		<p>Os autores são <a href="https://github.com/felipebastosweb" class="user-mention">@felipebastosweb</a> <a href="https://github.com/paulodealmeida" class="user-mention">@paulodealmeida</a> <a href="https://github.com/vitorpc" class="user-mention">@vitorpc</a> <a href="https://github.com/celsodantas" class="user-mention">@celsodantas</a></p>
-      </section>
-    </div>
+        <title>Guru-ba.github.com</title>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-</body>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <meta name="description" content="Guru-ba.github.com : Grupo de Usuarios Ruby da Bahia" />
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+                <a id="forkme_banner" href="https://github.com/guru-ba">View on GitHub</a>
+                <h1 id="project_title">Guru-ba.github.com</h1>
+                <h2 id="project_tagline">Grupo de Usuarios Ruby da Bahia</h2>
+            </header>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h1>Colaboração</h1>
+                <p>Vamos falar um pouco sobre como desenvolver códigos ruby de forma colaborativa, através do Git.</p>
+                <h2>Criando um repositório no Github</h2>
+                <br />
+                <h2>Clonando para o repositório local</h2>
+                <p>Você pode clonar um repositório usando o programa <a href="http://windows.github.com/">Github for Windows</a>. Para isto, após logar no programa do github, abra o menu repositórios, e click no botão direito que clona o projeto. Após clicar, seu projeto aparecerá em C:\Users\SEU-USUARIO\Documents\GitHub\seu-projeto e poderá utilizá-lo normalmente.</p>
+                <p>Mas, se você não quiser utilizar o Github for Windows, estando com o Git instalado, vamos ver como proceder no Prompt do Windows ou Terminal do Linux.</p>
+                <code>git clone http://github.com/nomeUsuarioOuOrganizacao/projeto.git projeto</code>
+                <br /><br />
+                <p>Feito isto, o repositório será copiado integralmente para a atual pasta onde o prompt/terminal está aberto.</p>
+                <h2>Adicionando e removendo arquivos</h2>
+                <p>Quando você criar um arquivo dentro do seu repositório, precisa versioná-lo no Git. Mas antes de executarmos qualquer comando, é sempre bom verificar o status do projeto. Para isto vamos usar o comando STATUS que irá nos informar o que foi alterado, e nos dará dicas de como proceder.<p>
+                    <code>git status</code>
+                <br />
+                <p>Agora que já sabemos quais arquivos foram alterados, vamos seguir as dicas que são: caso algum arquivo tenha sido criado ou alterado, devemos usar o comando ADD para incluir a alteração no projeto.</p>
+                <p>Para isto, vai usar o comando ADD incluindo todas as alterações feitas:</p>
+                <code>git add *</code>
+                <br /><br />
+                <p>Neste caso você adicionará todos os arquivos ou alterações que ainda não estejam versionados. Caso deseje incluir um arquivo ou alteração específica, basta trocar o * pelo nome do arquivo a ser incluído, ou onde ocorreu a alteração.</p>
+                <code>git add index.php</code>
+                <br /><br />
+                <p>Vale lembrar que, você sempre deve partir da raiz do projeto. Se o arquivo estiver em uma pasta application, então você vai dar um git add no arquivo application/index.php.</p>
+                <p>Pronto, seu arquivo foi incluído no repositório, agora você pode confirmar a inclusão dando um COMMIT no respositório.</p>
+                <code>git commit -m "Descrição das alterações feitas"</code>
+                <br /><br />
+                <p>Agora que o repositório está devidamente versionado localmente, para que ele seja atualizado no Github vamos utilizar o comando PUSH.</p>
+                <code>git push origin master</code>
+                <br /><br />
+                <p>Neste caso, utilizamos o comando PUSH para enviar o arquivo para o local de origem dele, que no caso é o Github, e ele será versionado no branch master, que é o repositório principal.</p>
+                <h2>Fiz um push antes de comitar, o que faço agora?</h2>
+                <p>Isto é fácil de resolver. O Git fez uma atualização no projeto que pode ser desfeita. Para isto vamos usar o comando RESET.</p>
+                <code>git reset HEAD</code>
+                <br /><br />
+                <p>Feito isto, tanto o comando ADD como o PUSH serão desfeitos. Então, execute novamente o ADD, em seguida o COMMIT e posteriormente o PUSH.</p>
+                <h2>Outro usuário alterou o arquivo, o que faço?</h2>
+                <p>Antes de fazer qualquer mudança em um projeto em que outras pessoas esteja também trabalhando, você deve atualizar o repositório para que ele fique do mesmo jeito que está o repositório guardado no GitHub. Para isto, vamos usar o comando CHECKOUT que vai trazer todas as mudanças do projeto para o meu repositório local.</p>
+                <code>git checkout</code>
+                <br /><br />
+                <p>Pronto, agora todo os arquivos que foram alterados pelos membros de minha equipes já estão no meu repositório e posso trabalhar, criando novos arquivos ou editando ou já existentes.</p>
+                <h2>Ocorreu um conflito?</h2>
+                <p>Pronto, duas pessoas alteraram o mesmo arquivo e ocorreu um conflito. O que fazer?</p>
+                <h2>Adicionando outro projeto como submodulo</h2>
+                <p>Vamos supor que você deseja adicionar alguma biblioteca ou framework que já esteja hospedado em um projeto no GitHub. Para adicionar esta biblioteca ou framework vamos utilizar o comando SUBMODULE ADD, vejamos como fica:</p>
+                <code>git submodule add http://github.com/nomeUsuarioOuOrganizacao/projeto.git pastasubmodulo</code>
+                <br /><br />
+                <p>Criamos um submodulo, dentro da pasta pastasubmodulo, dentro do nosso projeto. Se você observar, o submodulo foi criado para o seu projeto. Agora você pode fazer as alterações que desejar no seu submodulo, pois somente fará efeito no seu repositorio.</p>
+                <p>Agora, vamos adicionar os arquivos do submodulo no nosso projeto, seguindo os passos já vistos anteriormente.</p>
+                <code>
+                    git add *<br />
+                    git commit -m "adicionado submodulo ao projeto"<br />
+                    git push origin master
+                </code>
+                <br /><br />
+                <p>Feito isto, agora o submodulo foi completamente incorporado ao seu repositorio git no GitHub.</p>
+                <p><a href="http://git-scm.com/book/pt-br/Ferramentas-do-Git-Subm%C3%B3dulos" target="_blank">Veja mais em ...</a></p>
+                <h3>Autores e Colaboradores</h3>
+                <p>Os autores são <a href="https://github.com/felipebastosweb" class="user-mention">@felipebastosweb</a> <a href="https://github.com/paulodealmeida" class="user-mention">@paulodealmeida</a> <a href="https://github.com/vitorpc" class="user-mention">@vitorpc</a> <a href="https://github.com/celsodantas" class="user-mention">@celsodantas</a></p>
+            </section>
+        </div>
+
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+            </footer>
+        </div>
+    </body>
 </html>
